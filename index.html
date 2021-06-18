@@ -1,0 +1,338 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0069)http://www.cs.cmu.edu/~dchaplot/projects/neural-topological-slam.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!-- ======================================================================= -->
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=us-ascii" />
+  <script type="text/javascript" id="www-widgetapi-script" src="./video-dqn-website_files/www-widgetapi.js" async="">
+</script>
+  <script src="./video-dqn-website_files/jsapi" type="text/javascript">
+</script>
+  <script type="text/javascript">
+//<![CDATA[
+  google.load("jquery", "1.3.2");
+  //]]>
+  </script>
+  <script type="text/javascript" charset="UTF-8" src="./video-dqn-website_files/jquery.min.js">
+</script>
+  <style type="text/css">
+/*<![CDATA[*/
+  body {
+    font-family: "Titillium Web","HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight:300;
+    font-size:18px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1100px;
+  }
+
+  h1 {
+    font-weight:300;
+  }
+
+  .disclaimerbox {
+    background-color: #eee;
+    border: 1px solid #eeeeee;
+    border-radius: 10px ;
+    -moz-border-radius: 10px ;
+    -webkit-border-radius: 10px ;
+    padding: 20px;
+  }
+
+  video.header-vid {
+    height: 140px;
+    border: 1px solid black;
+    border-radius: 10px ;
+    -moz-border-radius: 10px ;
+    -webkit-border-radius: 10px ;
+  }
+
+  img.header-img {
+    height: 140px;
+    border: 1px solid black;
+    border-radius: 10px ;
+    -moz-border-radius: 10px ;
+    -webkit-border-radius: 10px ;
+  }
+
+  img.rounded {
+    border: 1px solid #eeeeee;
+    border-radius: 10px ;
+    -moz-border-radius: 10px ;
+    -webkit-border-radius: 10px ;
+  }
+
+  a:link,a:visited
+  {
+    color: #1367a7;
+    text-decoration: none;
+  }
+  a:hover {
+    color: #208799;
+  }
+
+  td.dl-link {
+    height: 160px;
+    text-align: center;
+    font-size: 22px;
+  }
+
+  .layered-paper-big { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
+    box-shadow:
+            0px 0px 1px 1px rgba(0,0,0,0.35), /* The top layer shadow */
+            5px 5px 0 0px #fff, /* The second layer */
+            5px 5px 1px 1px rgba(0,0,0,0.35), /* The second layer shadow */
+            10px 10px 0 0px #fff, /* The third layer */
+            10px 10px 1px 1px rgba(0,0,0,0.35), /* The third layer shadow */
+            15px 15px 0 0px #fff, /* The fourth layer */
+            15px 15px 1px 1px rgba(0,0,0,0.35), /* The fourth layer shadow */
+            20px 20px 0 0px #fff, /* The fifth layer */
+            20px 20px 1px 1px rgba(0,0,0,0.35), /* The fifth layer shadow */
+            25px 25px 0 0px #fff, /* The fifth layer */
+            25px 25px 1px 1px rgba(0,0,0,0.35); /* The fifth layer shadow */
+    margin-left: 10px;
+    margin-right: 45px;
+  }
+
+
+  .layered-paper { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
+    box-shadow:
+            0px 0px 1px 1px rgba(0,0,0,0.35), /* The top layer shadow */
+            5px 5px 0 0px #fff, /* The second layer */
+            5px 5px 1px 1px rgba(0,0,0,0.35), /* The second layer shadow */
+            10px 10px 0 0px #fff, /* The third layer */
+            10px 10px 1px 1px rgba(0,0,0,0.35); /* The third layer shadow */
+    margin-top: 5px;
+    margin-left: 10px;
+    margin-right: 30px;
+    margin-bottom: 5px;
+  }
+
+  .vert-cent {
+    position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+  }
+
+  hr
+  {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+  }
+
+  #authors td {
+    padding-bottom:5px;
+    padding-top:30px;
+  }
+  /*]]>*/
+  </style><!-- ======================================================================= -->
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+
+  <script async="" src="./video-dqn-website_files/js" type="text/javascript">
+</script>
+  <script type="text/javascript">
+//<![CDATA[
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-114291442-6');
+  //]]>
+  </script>
+  <script type="text/javascript" src="./video-dqn-website_files/hidebib.js">
+</script>
+  <link href="./video-dqn-website_files/css" rel="stylesheet" type="text/css" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <link rel="icon" type="image/png" href="" />
+
+  <title>Semantic Visual Navigation by Watching Youtube Videos</title>
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="./video-dqn-website_files/iframe_api" type="text/javascript">
+</script>
+</head>
+
+<body>
+  <br />
+
+
+  <center>
+    <span style="font-size:44px;font-weight:bold;">Semantic Visual Navigation by <br/>Watching Youtube Videos</span>
+  </center>
+  <br />
+
+
+  <table align="center" width="800px">
+    <tbody>
+      <tr>
+        <td align="center" width="230px">
+          <center>
+            <span style="font-size:22px">Matthew Chang</span>
+          </center>
+        </td>
+
+        <td align="center" width="230px">
+          <center>
+            <span style="font-size:22px">Arjun Gupta</span>
+          </center>
+        </td>
+
+        <td align="center" width="230px">
+          <center>
+            <span style="font-size:22px">Saurabh Gupta</span>
+          </center>
+        </td>
+      </tr>
+
+
+      <tr>
+        <td align="center" width="230">
+          <center>
+            <span style="font-size:20px">UIUC</span>
+          </center>
+        </td>
+
+        <td align="center" width="230">
+          <center>
+            <span style="font-size:20px">UIUC</span>
+          </center>
+        </td>
+
+        <td align="center" width="230px">
+          <center>
+            <span style="font-size:20px">UIUC</span>
+          </center>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <table align="center" width="700px" style='margin-bottom: 30px'>
+      <tr>
+        <td align="center" width="230px">
+          <center>
+            <span style="font-size:20px; font-weight: 500;">Appearing in NeurIPS 2020</span>
+          </center>
+        </td>
+      </tr>
+  </table>
+
+  <table align="center" width="700px">
+          <tbody><tr>
+            <td align="center" width="200px"><center><span style="font-size:24px"><a href="https://arxiv.org/pdf/2006.10034.pdf">Paper</a></span></center></td>
+            <td align=center width=200px><center><span style="font-size:24px"><a href="https://github.com/MatthewChang/video-dqn">Code</a></span></center></td>
+            <td align="center" width="200px"><center><span style="font-size:24px"><a href="http://matthewchang.web.illinois.edu/public_slides/valueLearningFromVideos.key">Slides (Keynote)</a></span></center></td>
+            <td align="center" width="200px"><center><span style="font-size:24px"><a href="http://matthewchang.web.illinois.edu/public_slides/valueLearningFromVideos.pdf">Slides (PDF)</a></span></center></td>
+            <td align="center" width="200px"><center><span style="font-size:24px"><a href="./video-dqn-website_files/vlvPoster.pdf">Poster</a></span></center></td>
+          </tr><tr>
+      </tr></tbody></table>
+
+
+
+
+
+  <table align="center" width="300px" style="padding-top: 25px">
+    <tbody>
+      <tr>
+        <td align="center" width="300px"><iframe width="700" height="400" src="https://www.youtube.com/embed/yK8ZtE15p5c" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></iframe>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <br />
+
+  <br />
+
+
+  <div style="width:800px; margin:0 auto; text-align:justify">
+Semantic cues and statistical regularities in real-world environment layouts can improve efficiency for navigation in novel environments. This paper learns and leverages such semantic cues for navigating to objects of interest in novel environments, by simply watching YouTube videos. This is challenging because YouTube videos don't come with labels for actions or goals, and may not even showcase optimal behavior. Our method tackles these challenges through the use of Q-learning on pseudo-labeled transition quadruples (image, action, next image, reward). We show that such off-policy Q-learning from passive data is able to learn meaningful semantic cues for navigation. These cues, when used in a hierarchical navigation policy, lead to improved efficiency at the ObjectGoal task in visually realistic simulations. We observe a relative improvement of 15-83% over end-to-end RL, behavior cloning, and classical methods, while using minimal direct interaction.
+  </div>
+  <br />
+
+  <hr />
+
+
+  <center>
+    <h1>Value Learning from Videos</h1>
+  </center>
+
+
+  <div style="width:800px; margin:0 auto; text-align:justify">
+    Egocentric videos tours of indoor spaces are grounded in actions (by labeling via an inverse model), and labeled with goals (using an object detector). This prepares them for Q-learning, which can extract out optimal Q-functions for reaching goals purely by watching egocentric videos.
+  </div>
+  <br />
+
+
+  <p style="margin-top:4px;">
+  </p>
+
+
+  <table align="center" width="1000px">
+    <tbody>
+      <tr>
+        <td width="1200px">
+          <center>
+            <a href="./video-dqn-website_files/vfv.gif"><img src="./video-dqn-website_files/vfv.gif" width="600px" /></a><br />
+          </center>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <br />
+
+  <hr />
+
+  <center>
+    <h1>Paper</h1>
+  </center>
+
+
+  <table align="center" width="auto">
+    <tbody>
+      <tr>
+        <td width="200px" align="left">
+          <a href="https://arxiv.org/pdf/2006.10034.pdf"><img style="width:200px;border-style: solid; border-color: black; border-width: thin" src="./video-dqn-website_files/thumbnail.jpg"/></a>
+          <center>
+          </center>
+        </td>
+        <td width="50px" align="center">
+        </td>
+
+        <td width="450px" align="left">
+          <span style="font-size:6px;">&nbsp;<br /></span> <span style="font-size:15pt">Matthew Chang, Arjun Gupta, Saurabh Gupta. <br/>Semantic Visual Navigation by Watching Youtube Videos. <br/>In NeurIPS 2020.</span></p>
+          <div class="paper" id="assemblies19_bib">
+            <pre xml:space="preserve" style="display: block; font-size: 12px">
+@inproceedings{chang2020semantic,
+  title={Semantic Visual Navigation by Watching Youtube Videos},
+  author={Matthew Chang and Arjun Gupta and Saurabh Gupta},
+  booktitle={NeurIPS},
+  year={2020}
+}
+</pre>
+          </div>
+        </td>
+      </tr>
+
+
+    </tbody>
+  </table>
+  <br />
+
+  <hr/>
+<table align="center" width="800px">
+      <tbody><tr><td width="800px"><left>
+      <center><h1>Acknowledgements</h1></center>
+We thank Sanjeev Venkatesan for help with data collection. We also thank Rishabh Goyal, Ashish Kumar, and Tanmay Gupta for feedback on the paper. This material is based upon work supported by NSF under Grant No. IIS-2007035, and DARPA Machine Common Sense. Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation or DARPA.
+          Website template from <a href="https://richzhang.github.io/colorization">here</a>, <a href="https://pathak22.github.io/modular-assemblies/">here</a>, and <a href="http://www.cs.cmu.edu/~dchaplot/projects/neural-topological-slam.html">here</a>. <br>
+      </left></td></tr>
+    </tbody></table>
+
+  <br />
+  <script xml:space="preserve" language="JavaScript" type="text/javascript">
+  <!--hideallbibs();-->
+  </script>
+</body>
+</html>
