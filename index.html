@@ -1,0 +1,393 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0069)http://www.cs.cmu.edu/~dchaplot/projects/neural-topological-slam.html -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!-- ======================================================================= -->
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=us-ascii" />
+  <script type="text/javascript" id="www-widgetapi-script" src="./vision-agnav-website_files/www-widgetapi.js" async="">
+</script>
+  <script src="./vision-agnav-website_files/jsapi" type="text/javascript">
+</script>
+  <script type="text/javascript">
+//<![CDATA[
+  google.load("jquery", "1.3.2");
+  //]]>
+  </script>
+  <script type="text/javascript" charset="UTF-8" src="./vision-agnav-website_files/jquery.min.js">
+</script>
+  <style type="text/css">
+/*<![CDATA[*/
+  body {
+    font-family: "Titillium Web","HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight:300;
+    font-size:18px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1100px;
+  }
+
+  h1 {
+    font-weight:300;
+  }
+
+  .disclaimerbox {
+    background-color: #eee;
+    border: 1px solid #eeeeee;
+    border-radius: 10px ;
+    -moz-border-radius: 10px ;
+    -webkit-border-radius: 10px ;
+    padding: 20px;
+  }
+
+  video.header-vid {
+    height: 140px;
+    border: 1px solid black;
+    border-radius: 10px ;
+    -moz-border-radius: 10px ;
+    -webkit-border-radius: 10px ;
+  }
+
+  img.header-img {
+    height: 140px;
+    border: 1px solid black;
+    border-radius: 10px ;
+    -moz-border-radius: 10px ;
+    -webkit-border-radius: 10px ;
+  }
+
+  img.rounded {
+    border: 1px solid #eeeeee;
+    border-radius: 10px ;
+    -moz-border-radius: 10px ;
+    -webkit-border-radius: 10px ;
+  }
+
+  a:link,a:visited
+  {
+    color: #1367a7;
+    text-decoration: none;
+  }
+  a:hover {
+    color: #208799;
+  }
+
+  td.dl-link {
+    height: 160px;
+    text-align: center;
+    font-size: 22px;
+  }
+
+  .layered-paper-big { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
+    box-shadow:
+            0px 0px 1px 1px rgba(0,0,0,0.35), /* The top layer shadow */
+            5px 5px 0 0px #fff, /* The second layer */
+            5px 5px 1px 1px rgba(0,0,0,0.35), /* The second layer shadow */
+            10px 10px 0 0px #fff, /* The third layer */
+            10px 10px 1px 1px rgba(0,0,0,0.35), /* The third layer shadow */
+            15px 15px 0 0px #fff, /* The fourth layer */
+            15px 15px 1px 1px rgba(0,0,0,0.35), /* The fourth layer shadow */
+            20px 20px 0 0px #fff, /* The fifth layer */
+            20px 20px 1px 1px rgba(0,0,0,0.35), /* The fifth layer shadow */
+            25px 25px 0 0px #fff, /* The fifth layer */
+            25px 25px 1px 1px rgba(0,0,0,0.35); /* The fifth layer shadow */
+    margin-left: 10px;
+    margin-right: 45px;
+  }
+
+
+  .layered-paper { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
+    box-shadow:
+            0px 0px 1px 1px rgba(0,0,0,0.35), /* The top layer shadow */
+            5px 5px 0 0px #fff, /* The second layer */
+            5px 5px 1px 1px rgba(0,0,0,0.35), /* The second layer shadow */
+            10px 10px 0 0px #fff, /* The third layer */
+            10px 10px 1px 1px rgba(0,0,0,0.35); /* The third layer shadow */
+    margin-top: 5px;
+    margin-left: 10px;
+    margin-right: 30px;
+    margin-bottom: 5px;
+  }
+
+  .vert-cent {
+    position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+  }
+
+  hr
+  {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+  }
+
+  #authors td {
+    padding-bottom:5px;
+    padding-top:30px;
+  }
+  /*]]>*/
+  </style><!-- ======================================================================= -->
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+
+  <script async="" src="./vision-agnav-website_files/js" type="text/javascript">
+</script>
+  <script type="text/javascript">
+//<![CDATA[
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-114291442-6');
+  //]]>
+  </script>
+  <script type="text/javascript" src="./vision-agnav-website_files/hidebib.js">
+</script>
+  <link href="./vision-agnav-website_files/css" rel="stylesheet" type="text/css" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <link rel="icon" type="image/png" href="" />
+
+  <title>Learned Visual Navigation for Under-Canopy Agricultural Robots</title>
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="./vision-agnav-website_files/iframe_api" type="text/javascript">
+</script>
+</head>
+
+<body>
+  <br />
+
+
+  <center>
+    <span style="font-size:44px;font-weight:bold;">Learned Visual Navigation for <br/>Under-Canopy Agricultural Robots</span>
+  </center>
+  <br />
+
+
+  <table align="center" width="1200px">
+    <tbody>
+      <tr>
+        <td align="center" width="230px">
+          <center>
+            <span style="font-size:22px">Arun Narenthiran Sivakumar</span>
+          </center>
+        </td>
+
+        <td align="center" width="230px">
+          <center>
+            <span style="font-size:22px">Sahil Modi</span>
+          </center>
+        </td>
+
+        <td align="center" width="230px">
+          <center>
+            <span style="font-size:22px">Mateus Valverde Gasparino</span>
+          </center>
+        </td>
+
+        <td align="center" width="230px">
+          <center>
+            <span style="font-size:22px">Che Ellis</span>
+          </center>
+        </td>
+
+        <td align="center" width="230px">
+          <center>
+            <span style="font-size:22px">Andres Baquero Velasquez</span>
+          </center>
+        </td>
+
+        <td align="center" width="230px">
+          <center>
+            <span style="font-size:22px">Girish Chowdhary</span>
+          </center>
+        </td>
+
+        <td align="center" width="230px">
+          <center>
+            <span style="font-size:22px">Saurabh Gupta</span>
+          </center>
+        </td>
+      </tr>
+
+
+      <tr>
+        <td align="center" width="230">
+          <center>
+            <span style="font-size:20px">UIUC</span>
+          </center>
+        </td>
+
+        <td align="center" width="230">
+          <center>
+            <span style="font-size:20px">UIUC</span>
+          </center>
+        </td>
+
+        <td align="center" width="230px">
+          <center>
+            <span style="font-size:20px">UIUC</span>
+          </center>
+        </td>
+
+        <td align="center" width="230px">
+          <center>
+            <span style="font-size:20px">Earthsense </span>
+          </center>
+        </td>        
+
+        <td align="center" width="230">
+          <center>
+            <span style="font-size:20px">UIUC</span>
+          </center>
+        </td>
+
+        <td align="center" width="230">
+          <center>
+            <span style="font-size:20px">UIUC</span>
+          </center>
+        </td>
+
+        <td align="center" width="230px">
+          <center>
+            <span style="font-size:20px">UIUC</span>
+          </center>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <table align="center" width="700px" style='margin-bottom: 30px'>
+      <tr>
+        <td align="center" width="230px">
+          <center>
+            <span style="font-size:30px; font-weight: 500;">RSS 2021</span>
+          </center>
+        </td>
+      </tr>
+  </table>
+
+  <table align="center" width="700px">
+          <tbody><tr>
+            <td align="center" width="200px"><center><span style="font-size:24px"><a href="https://github.com/ansivakumar/learned-visual-navigation">Paper</a></span></center></td>
+            <td align="center" width="200px"><center><span style="font-size:24px"><a href="https://github.com/ansivakumar/learned-visual-navigation">Data</a></span></center></td-->
+            <td align=center width=200px><center><span style="font-size:24px"><a href="https://github.com/ansivakumar/learned-visual-navigation">Code for ground truth label</a></span></center></td>
+            <td align="center" width="200px"><center><span style="font-size:24px"><a href="https://github.com/ansivakumar/learned-visual-navigation">Slides (PDF)</a></span></center></td>
+            
+          </tr><tr>
+      </tr></tbody></table>
+
+
+
+
+
+  <table align="center" width="300px" style="padding-top: 25px">
+    <tbody>
+      <tr>
+        <td align="center" width="300px"><iframe width="700" height="400" src="https://www.youtube.com/embed/O4w5jC29-aY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></iframe>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <br />
+
+  <br />
+
+
+  <div style="width:800px; margin:0 auto; text-align:justify">
+    This paper describes a system for visually guided autonomous navigation of under-canopy farm robots. Low-cost under-canopy robots can drive between crop rows under the plant canopy and accomplish tasks that are infeasible for over-the-canopy drones or larger agricultural equipment. However, autonomously navigating them under the canopy presents a number of challenges: unreliable GPS and LiDAR, high cost of sensing, challenging farm terrain, clutter due to leaves and weeds, and large variability in appearance over the season and across crop types. We address these challenges by building a modular system that leverages machine learning for robust and generalizable perception from monocular RGB images from low-cost cameras, and model predictive control for accurate control in challenging terrain. Our system, CropFollow, is able to autonomously drive 485 meters per intervention on average, outperforming a state-of-the-art LiDAR based system (286 meters per intervention) in extensive field testing spanning over 25 km.
+  </div>
+  <br />
+
+  <hr />
+
+
+  <center>
+    <h1></h1>
+  </center>
+
+
+  <div style="width:800px; margin:0 auto; text-align:justify">
+    <b>CropFollow Overview</b> 
+    <br />
+    &emsp; &emsp; We use a convolutional network to output robot heading and placement in row. This is used to compute the row center which is used as a reference trajectory. A model predictive controller converts reference trajectories to angular velocity commands.
+  </div>
+  <br />
+
+
+  <p style="margin-top:4px;">
+  </p>
+
+
+  <table align="center" width="1000px">
+    <tbody>
+      <tr>
+        <td width="1200px">
+          <center>
+            <a href="./vision-agnav-website_files/visionnav.jpg"><img src="./vision-agnav-website_files/visionnav.jpg" width="300px" /></a><br />
+          </center>
+          <center>
+            <a href="./vision-agnav-website_files/architecture_cropped.jpg"><img src="./vision-agnav-website_files/architecture_cropped.jpg" width="800px" /></a><br />
+          </center>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <br />
+
+  <hr />
+
+  <center>
+    <h1>Paper</h1>
+  </center>
+
+
+  <table align="center" width="auto">
+    <tbody>
+      <tr>
+        <td width="200px" align="left">
+          <a href=""><img style="width:200px;border-style: solid; border-color: black; border-width: thin" src="./vision-agnav-website_files/thumbnail.jpg"/></a>
+          <center>
+          </center>
+        </td>
+        <td width="50px" align="center">
+        </td>
+
+        <td width="450px" align="left">
+          <span style="font-size:6px;">&nbsp;<br /></span> <span style="font-size:15pt">Arun Narenthiran Sivakumar, Sahil Modi, Mateus Valverde Gasparino, Che Ellis, Andres Baquero Velasquez, Girish Chowdhary, Saurabh Gupta. <br/>Learned Visual Navigation for Under-Canopy Agricultural Robots. <br/>RSS 2021.</span></p>
+          <div class="paper" id="assemblies19_bib">
+            <pre xml:space="preserve" style="display: block; font-size: 12px">
+@inproceedings{sivakumar2021learned,
+  author = "Sivakumar, Arun Narenthiran and Modi, Sahil and Gasparino, Mateus Valverde and 
+  Ellis, Che and Velasquez, Andres Baquero and Chowdhary, Girish and Gupta, Saurabh",
+  title = "Learned Visual Navigation for Under-Canopy Agricultural Robots",
+  booktitle = "Robotics: Science and Systems",
+  year = "2021"
+  }
+</pre>
+          </div>
+        </td>
+      </tr>
+
+
+    </tbody>
+  </table>
+  <br />
+
+  <hr/>
+<table align="center" width="800px">
+      <tbody><tr><td width="800px"><left>
+      <center><h1>Acknowledgements</h1></center>
+We thank  Vitor  A.H.  Higuti  andSri Theja Vuppala for their help in integration of the proposed navigation system on the robot and field validation.
+<!--We thank Sanjeev Venkatesan for help with data collection. We also thank Rishabh Goyal, Ashish Kumar, and Tanmay Gupta for feedback on the paper. This material is based upon work supported by NSF under Grant No. IIS-2007035, and DARPA Machine Common Sense. Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation or DARPA.-->
+          Website template from <a href="https://matthewchang.github.io/value-learning-from-videos/">here</a>. <br>
+      </left></td></tr>
+    </tbody></table>
+
+  <br />
+  <script xml:space="preserve" language="JavaScript" type="text/javascript">
+  <!--hideallbibs();-->
+  </script>
+</body>
+</html>
