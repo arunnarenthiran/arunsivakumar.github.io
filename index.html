@@ -166,54 +166,58 @@
   <br />
 
 
-  <table align="center" width="1200px">
+  <table align="center" width="1200px" style='margin-bottom: 10px'>
     <tbody>
       <tr>
         <td align="center" width="230px">
           <center>
-            <span style="font-size:22px">Arun Narenthiran Sivakumar</span>
+            <span style="font-size:22px">Arun Narenthiran Sivakumar<sup>1</sup></span>
           </center>
         </td>
 
         <td align="center" width="230px">
           <center>
-            <span style="font-size:22px">Sahil Modi</span>
+            <span style="font-size:22px">Sahil Modi<sup>1</sup></span>
           </center>
         </td>
 
         <td align="center" width="230px">
           <center>
-            <span style="font-size:22px">Mateus Valverde Gasparino</span>
+            <span style="font-size:22px">Mateus Valverde Gasparino<sup>1</sup></span>
           </center>
         </td>
 
         <td align="center" width="230px">
           <center>
-            <span style="font-size:22px">Che Ellis</span>
+            <span style="font-size:22px">Che Ellis<sup>2</sup></span>
           </center>
         </td>
 
         <td align="center" width="230px">
           <center>
-            <span style="font-size:22px">Andres Baquero Velasquez</span>
+            <span style="font-size:22px">Andres Baquero Velasquez<sup>1</sup></span>
           </center>
         </td>        
 
         <td align="center" width="230px">
           <center>
-            <span style="font-size:22px">Saurabh Gupta</span>
+            <span style="font-size:22px">Saurabh Gupta<sup>1</sup></span>
           </center>
         </td>
 
         <td align="center" width="230px">
           <center>
-            <span style="font-size:22px">Girish Chowdhary</span>
+            <span style="font-size:22px">Girish Chowdhary<sup>1</sup></span>
           </center>
         </td>
       </tr>
 
 
-      <tr>
+      
+
+
+
+      <!-- <tr>
         <td align="center" width="230">
           <center>
             <span style="font-size:20px">UIUC</span>
@@ -255,10 +259,35 @@
             <span style="font-size:20px">UIUC</span>
           </center>
         </td>
-      </tr>
+      </tr> -->
     </tbody>
   </table>
-  <table align="center" width="700px" style='margin-bottom: 30px'>
+
+  <table align="center" width="700px" style='margin-bottom: 5px'>
+    <tr>
+      <td align="center" width="230px">
+        <center>
+          <span style="font-size:17px; font-weight: 200;"><sup>1</sup> Center for Digital Agriculture, University of Illinois at Urbana-Champaign</span>
+       
+        </center>
+      </td>
+      
+    </tr>
+  </table>
+  <table align="center" width="700px" style='margin-bottom: 10px'>
+    <tr>
+      <td align="center" width="230px">
+        <center>
+          <span style="font-size:17px; font-weight: 200;"><sup>2</sup> Earthsense Inc. </span>
+       
+        </center>
+      </td>
+      
+    </tr>
+  </table>
+
+
+  <table align="center" width="700px" style='margin-bottom: 10px'>
       <tr>
         <td align="center" width="230px">
           <center>
@@ -270,10 +299,10 @@
 
   <table align="center" width="700px">
           <tbody><tr>
-            <td align="center" width="200px"><center><span style="font-size:24px"><a href="https://github.com/ansivakumar/learned-visual-navigation">Paper</a></span></center></td>
-            <td align="center" width="200px"><center><span style="font-size:24px"><a href="https://github.com/ansivakumar/learned-visual-navigation">Data</a></span></center></td-->
-            <td align=center width=200px><center><span style="font-size:24px"><a href="https://github.com/ansivakumar/learned-visual-navigation">Code for ground truth label</a></span></center></td>
-            <td align="center" width="200px"><center><span style="font-size:24px"><a href="https://github.com/ansivakumar/learned-visual-navigation">Slides (PDF)</a></span></center></td>
+            <td align="center" width="10px"><center><span style="font-size:24px"><a href="https://github.com/ansivakumar/learned-visual-navigation">Paper</a></span></center></td>
+            <td align="center" width="100px"><center><span style="font-size:24px"><a href="https://github.com/ansivakumar/learned-visual-navigation">Data</a></span></center></td-->
+            <td align=center width=100px><center><span style="font-size:24px"><a href="https://github.com/ansivakumar/learned-visual-navigation">Code for ground truth label</a></span></center></td>
+            <td align="center" width="100px"><center><span style="font-size:24px"><a href="https://github.com/ansivakumar/learned-visual-navigation">Slides (PDF)</a></span></center></td>
             
           </tr><tr>
       </tr></tbody></table>
@@ -307,11 +336,18 @@
     <h1></h1>
   </center>
 
+  <table align="center" width="700px" style='margin-bottom: 30px'>
+    <tr>
+      <td align="center" width="230px">
+        <center>
+          <span style="font-size:30px; font-weight: 500;">CropFollow Overview</span>
+        </center>
+      </td>
+    </tr>
+  </table>
 
   <div style="width:800px; margin:0 auto; text-align:justify">
-    <b>CropFollow Overview</b> 
-    <br />
-    &emsp; &emsp; We use a convolutional network to output robot heading and placement in row. This is used to compute the row center which is used as a reference trajectory. A model predictive controller converts reference trajectories to angular velocity commands.
+      We use a convolutional network to output robot heading and placement in row. This is used to compute the row center which is used as a reference trajectory. A model predictive controller converts reference trajectories to angular velocity commands.
   </div>
   <br />
 
@@ -360,7 +396,7 @@
             <pre xml:space="preserve" style="display: block; font-size: 12px">
 @inproceedings{sivakumar2021learned,
   author = "Sivakumar, Arun Narenthiran and Modi, Sahil and Gasparino, Mateus Valverde and 
-  Ellis, Che and Velasquez, Andres Baquero and Chowdhary, Girish and Gupta, Saurabh",
+  Ellis, Che and Velasquez, Andres Baquero and Gupta, Saurabh and Chowdhary, Girish",
   title = "Learned Visual Navigation for Under-Canopy Agricultural Robots",
   booktitle = "Robotics: Science and Systems",
   year = "2021"
@@ -379,8 +415,7 @@
 <table align="center" width="800px">
       <tbody><tr><td width="800px"><left>
       <center><h1>Acknowledgements</h1></center>
-We thank Vitor A. H. Higuti and Sri Theja Vuppala for their help in integration of the proposed navigation system on the robot and field validation.
-<!--This material is based upon work supported by . Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the .-->
+      This paper was supported in part by NSF STTR #1820332, USDA/NSF CPS project #2018-67007-28379, and USDA/NSF AIFARMS National AI Institute USDA #020-67021-32799/project accession no.1024178. We thank Earthsense Inc. for the robots used in this work and the Illinois Autonomous Farm facility for data collection and field validation of CropFollow. We thank Vitor Akihiro H. Higuti and Sri Theja Vuppala for their help in integration of CropFollow on the robot and field validation.
           Website template from <a href="https://matthewchang.github.io/value-learning-from-videos/">here</a>. <br>
       </left></td></tr>
     </tbody></table>
